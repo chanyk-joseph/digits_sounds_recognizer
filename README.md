@@ -17,6 +17,7 @@ $ pip3 install -r requirements.txt
 # Predict
 ```bash
 $ python predict.py ./data/4999.mp3
+Prediction for ./data/4999.mp3 = 9972
 ```
 
 # Train
