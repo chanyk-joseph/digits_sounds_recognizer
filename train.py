@@ -66,13 +66,13 @@ net = tflearn.fully_connected(net, 64)
 net = tflearn.dropout(net, 0.5)
 net = tflearn.fully_connected(net, number_classes, activation='softmax')
 net = tflearn.regression(net, optimizer='adam', loss='categorical_crossentropy')
-model = tflearn.DNN(net)
+model = tflearn.DNN(net, best_checkpoint_path='./best_model')
 
 count = 0
 trainX, trainY = next(mfcc_batch_generator(train_df, len(train_df.index)))
 validationX, validationY = next(mfcc_batch_generator(validation_df, len(validation_df.index)))
-model.fit(trainX, trainY, n_epoch=80, batch_size=10, validation_set=(validationX, validationY), show_metric=True, snapshot_step=100, run_id='jchan')
-model.save("model")
+model.fit(trainX, trainY, n_epoch=100, batch_size=10, validation_set=(validationX, validationY), show_metric=True, snapshot_step=100, run_id='jchan')
+# model.save("model")
 
 
 for i in range(0, len(test_df.index)):
