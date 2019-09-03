@@ -19,7 +19,7 @@ def askDegit(sound):
     return ch
 
 
-for i in range(303, 350):
+for i in range(350, 400):
     audioPath = path.join(samples_folder, str(i) + '.mp3')
     audio = AudioSegment.from_mp3(audioPath)
     

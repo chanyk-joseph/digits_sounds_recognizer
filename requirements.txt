@@ -2,3 +2,7 @@ simpleaudio
 pydub
 numpy
 pandas
+sklearn
+librosa
+tensorflow
+tflearn

@@ -1,0 +1,2 @@
+model_checkpoint_path: "/hdd/projects/digits_sounds_recognizer/model"
+all_model_checkpoint_paths: "/hdd/projects/digits_sounds_recognizer/model"

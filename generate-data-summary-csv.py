@@ -11,7 +11,7 @@ def getLabeledSamples():
     dataFolder = "./data"
 
     data = dict()
-    for i in range(300):
+    for i in range(10000):
         pathFilter = "%s/%d-*-*.wav" % (dataFolder, i)
         files = glob.glob(pathFilter)
         for audioFilePath in files:
