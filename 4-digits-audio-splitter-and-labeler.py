@@ -4,6 +4,7 @@ from pydub.playback import play
 
 samples_folder = "./data"
 
+# Play the digit one by one, and ask user to input the correct label without enter
 def askDegit(sound):
     play(sound)
 
@@ -18,7 +19,7 @@ def askDegit(sound):
     return ch
 
 
-for i in range(300, 310):
+for i in range(303, 350):
     audioPath = path.join(samples_folder, str(i) + '.mp3')
     audio = AudioSegment.from_mp3(audioPath)
     
