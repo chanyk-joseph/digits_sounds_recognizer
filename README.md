@@ -31,3 +31,12 @@ $ node samples_collector.js
 $ python 4-digits-audio-splitter-and-labeler.py
 $ python generate-data-summary-csv.py
 ```
+
+# Deploy on Google Cloud
+```Shell
+$ cd ./gcloud-function
+$ gcloud functions deploy digits_recognizer --runtime=python37 --trigger-http --memory=512 --timeout=60s --region=asia-east2
+
+# Test
+$ curl -d '{"mp3":"<mp3_in_base64_string>"}' -H "Content-Type: application/json" -X POST https://asia-east2-protean-silicon-865.cloudfunctions.net/digits_recognizer
+```

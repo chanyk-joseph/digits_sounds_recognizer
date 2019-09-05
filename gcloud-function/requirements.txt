@@ -1,0 +1,6 @@
+pydub
+numpy
+sklearn
+librosa
+tensorflow
+tflearn
